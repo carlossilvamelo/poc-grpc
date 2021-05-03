@@ -1,0 +1,21 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package interfaces;
+
+import "google/protobuf/empty.proto";
+
+message Car {
+  int64 id = 1;
+  string name = 2;
+  string model = 3;
+  string color = 4;
+  repeated string doors = 5;
+}
+
+service CarService {
+  rpc getCar (Car) returns (stream Car) {
+  }
+
+  rpc getDoors (google.protobuf.Empty) returns (Car) {
+  }
+}
