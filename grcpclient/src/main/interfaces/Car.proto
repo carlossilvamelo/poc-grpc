@@ -3,6 +3,8 @@ option java_multiple_files = true;
 package interfaces;
 
 import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
 
 message Car {
   int64 id = 1;
@@ -14,6 +16,8 @@ message Car {
 
 service CarService {
   rpc getCar (Car) returns (stream Car) {
+  }
+  rpc getCarById (google.protobuf.Int32Value) returns (stream Car) {
   }
 
   rpc getDoors (google.protobuf.Empty) returns (Car) {
