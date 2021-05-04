@@ -25,6 +25,7 @@
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 
+
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
@@ -118,5 +119,11 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 .flattened-pom.xml
-
+mvnw.cmd
+#grcpclient/mvnw
+#grcpclient/mvnw.cmd
+#grcpclient/.mvn/**
+#grcpserver/mvnw
+#grcpserver/mvnw.cmd
+#grcpserver/.mvn/**
 # End of https://www.toptal.com/developers/gitignore/api/intellij,maven
