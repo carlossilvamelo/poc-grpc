@@ -25,21 +25,21 @@ public class CarClientService2 {
     private ManagedChannel channel;
 
     public List<CarDto> getCars() {
-        throw new IllegalStateException();
-//        List<CarDto> cars = new ArrayList();
-//
-//        CarServiceGrpc.CarServiceBlockingStub stub
-//                = CarServiceGrpc.newBlockingStub(channel);
-//
-//
-//        stub.getCar(Car.newBuilder().build())
-//                .forEachRemaining(messageResponse -> {
-//                    System.out.println(messageResponse);
-//                    cars.add(CarDto.fromProto(messageResponse));
-//                });
-//
-//        channel.shutdown();
-//
-//        return cars;
+
+        List<CarDto> cars = new ArrayList();
+
+        CarServiceGrpc.CarServiceBlockingStub stub
+                = CarServiceGrpc.newBlockingStub(channel);
+
+
+        stub.getCar(Car.newBuilder().build())
+                .forEachRemaining(messageResponse -> {
+                    System.out.println(messageResponse);
+                    cars.add(CarDto.fromProto(messageResponse));
+                });
+
+        channel.shutdown();
+
+        return cars;
     }
 }

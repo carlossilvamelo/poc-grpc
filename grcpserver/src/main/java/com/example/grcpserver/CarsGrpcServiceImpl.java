@@ -29,7 +29,7 @@ public class CarsGrpcServiceImpl extends CarServiceGrpc.CarServiceImplBase {
                             .addDoors("my passenger door")
                             .build();
 
-                    throwException(responseObserver);
+//                    throwException(responseObserver);
                     responseObserver.onNext(car);
                 });
         responseObserver.onCompleted();
