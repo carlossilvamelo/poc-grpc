@@ -8,3 +8,4 @@
 * Lançamento de erro no servidor gRPC (ok)
 * Teste unitário base de cliente (ok)
 * Teste unitário base de servidor (pendente)
+![arch](https://drive.google.com/uc?export=view&id=1wBIZq8ure675Eq8CPgsSInPd3xjRGdzq)
